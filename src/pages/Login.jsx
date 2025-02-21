@@ -45,12 +45,8 @@ const Login = () => {
 			<section className='login'>
 				<div className='flex flex-col items-center justify-center mt-32'>
 					<Link className='flex items-center mb-6 text-2xl font-semibold text-gray-900'>
-						<img
-							className='w-20 mr-2 rounded-xl'
-							src='images/logo_xoaphong.png'
-							alt='logo'
-						/>
-						<h1>CiStore</h1>
+						
+						<h1>Sugar Silk Cake</h1>
 					</Link>
 					<div className='w-full bg-white rounded-lg shadowr md:mt-0 sm:max-w-md xl:p-0'>
 						<div className='p-6 space-y-4 md:space-y-6 sm:p-8'>
