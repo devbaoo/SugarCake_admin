@@ -80,7 +80,7 @@ const Dashboard = () => {
 					return <p key={index}>{i?.product?._id}</p>;
 				}),
 				id: getAllOrders[i]?.paymentInfo?.razorpayPaymentId,
-				ammount: `$ ${getAllOrders[i]?.priceAfterDiscount}`,
+				ammount: `${getAllOrders[i]?.priceAfterDiscount} VND`,
 				orderStatus: getAllOrders[i]?.orderStatus,
 				date: new Date(getAllOrders[i]?.createdAt).toLocaleString(),
 			});
@@ -103,7 +103,7 @@ const Dashboard = () => {
 						<div>
 							<p className='my-5 text-gray-400'>Tổng doanh thu</p>
 							<h3 className='text-2xl text-green-700 font-bold my-5'>
-								{`$${totalOrdersAmount}`}
+								{`${totalOrdersAmount} VND`}
 							</h3>
 						</div>
 					</div>
@@ -116,9 +116,9 @@ const Dashboard = () => {
 							Giá trị đơn hàng trung bình
 							</p>
 							<h3 className='text-2xl font-bold text-green-700 my-5'>
-								{`$${Math.floor(
+								{`${Math.floor(
 									totalOrdersAmount / getAllOrders?.length
-								)}`}
+								)} VND`}
 							</h3>
 						</div>
 					</div>

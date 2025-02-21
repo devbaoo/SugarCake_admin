@@ -72,7 +72,7 @@ const Orders = () => {
 					return <p key={index}>{i?.product?._id}</p>;
 				}),
 				id: getAllOrders[i]?.paymentInfo?.razorpayPaymentId,
-				ammount: `$ ${getAllOrders[i]?.priceAfterDiscount}`,
+				ammount: `${getAllOrders[i]?.priceAfterDiscount} VND`,
 				orderStatus: getAllOrders[i]?.orderStatus,
 				date: new Date(getAllOrders[i]?.createdAt).toLocaleString(),
 				action: (

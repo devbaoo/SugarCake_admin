@@ -169,7 +169,7 @@ const ViewOrder = () => {
 												</span>
 											</p>
 											<p className='flex items-center text-sm text-blue-500 font-heading font-medium'>
-												<span className='mr-2'>$</span>
+												<span className='mr-2'>VND</span>
 												<span className='text-lg xl:text-xl'>
 													{product?.product?.price *
 														product?.quantity}
@@ -205,7 +205,7 @@ const ViewOrder = () => {
 											<span>Shipping</span>
 											<span className='flex items-center'>
 												<span className='mr-3 text-sm'>
-													$
+													VND
 												</span>
 												<span className='text-xl'>
 													{shippingCharge}
@@ -218,7 +218,7 @@ const ViewOrder = () => {
 											<span>Total</span>
 											<span className='flex items-center text-blue-500'>
 												<span className='mr-3 text-sm'>
-													$
+													VND
 												</span>
 												<span className='text-xl'>
 													{order?.totalPrice}
