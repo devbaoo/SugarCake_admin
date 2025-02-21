@@ -71,7 +71,7 @@ const AllProducts = () => {
 				key: i + 1,
 				title: totalProducts[i].title,
 				description: totalProducts[i].description,
-				price: `$ ${totalProducts[i].price}`,
+				price: `${totalProducts[i].price} VND`,
 				brand: totalProducts[i].brand,
 				color: totalProducts[i].color.map((cVal, index) => {
 					return <p key={index}>{cVal}</p>;
