@@ -144,7 +144,7 @@ const Enquiries = () => {
 	return (
 		<>
 			<div className='my-5'>
-				<h2 className='text-xl my-4 font-bold'>Enquiries</h2>
+				<h2 className='text-xl my-4 font-bold'>Thắc mắc</h2>
 				<Table columns={columns} dataSource={data} />
 			</div>
 			<CustomModel

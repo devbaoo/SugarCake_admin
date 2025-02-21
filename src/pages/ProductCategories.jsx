@@ -15,7 +15,7 @@ import { toast } from "react-toastify";
 import CustomModel from "../components/CustomModel";
 
 let userSchema = Yup.object().shape({
-	title: Yup.string().required("Category Name is Required"),
+	title: Yup.string().required("Tên danh mục là bắt buộc"),
 });
 
 const columns = [
@@ -114,7 +114,7 @@ const ProductCategories = () => {
 		<>
 			<section className='flex gap-5'>
 				<div className='w-[30%] pl-8'>
-					<h2 className='text-xl my-4 font-bold'>Add Category</h2>
+					<h2 className='text-xl my-4 font-bold'>Thêm danh mục</h2>
 
 					<form
 						action='#'
@@ -123,7 +123,7 @@ const ProductCategories = () => {
 						<input
 							className='w-[50%] px-3 py-3 border rounded text-sm'
 							type='text'
-							placeholder='Category Name'
+							placeholder='Tên danh mục'
 							name='title'
 							value={formik.values.title}
 							onChange={formik.handleChange("title")}
@@ -132,7 +132,7 @@ const ProductCategories = () => {
 						<button
 							type='submit'
 							className='bg-green-700 px-5  py-3 rounded text-white font-bold'>
-							Add Category
+							Thêm danh mục
 						</button>
 					</form>
 					<div className='error'>
@@ -140,7 +140,7 @@ const ProductCategories = () => {
 					</div>
 				</div>
 				<div className='w-[65%]'>
-					<h2 className='text-xl my-4 font-bold'>All Categories</h2>
+					<h2 className='text-xl my-4 font-bold'>Tất cả danh mục</h2>
 					<Table columns={columns} dataSource={data} />
 				</div>
 				<CustomModel

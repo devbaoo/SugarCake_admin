@@ -112,7 +112,7 @@ const AllColors = () => {
 		<>
 			<section className='flex gap-5'>
 				<div className='w-[30%] pl-8'>
-					<h2 className='text-xl my-4 font-bold'>Add Colors</h2>
+					<h2 className='text-xl my-4 font-bold'>Thêm màu sắc</h2>
 
 					<form
 						action='#'
@@ -121,14 +121,14 @@ const AllColors = () => {
 						<input
 							className='w-[30%] h-10 border rounded text-lg'
 							type='color'
-							placeholder='Enter Color'
+							placeholder='Nhập màu sắc'
 							name='title'
 							value={formik.values.title}
 							onChange={formik.handleChange("title")}
 							onBlur={formik.handleBlur("title")}
 						/>
 						<button className='bg-green-700 px-5 py-3 rounded text-white font-bold'>
-							Add Color
+							Thêm màu sắc
 						</button>
 					</form>
 					<div className='error'>
@@ -136,7 +136,7 @@ const AllColors = () => {
 					</div>
 				</div>
 				<div className='w-[65%]'>
-					<h2 className='text-xl my-4 font-bold'>Colors</h2>
+					<h2 className='text-xl my-4 font-bold'>Màu sắc</h2>
 					<Table columns={columns} dataSource={data} />
 				</div>
 				<CustomModel

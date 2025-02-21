@@ -118,7 +118,7 @@ const AllBrands = () => {
 		<>
 			<section className='flex gap-5'>
 				<div className='w-[30%] pl-8'>
-					<h2 className='text-xl my-4 font-bold'>Add Brand</h2>
+					<h2 className='text-xl my-4 font-bold'>Thêm thương hiệu</h2>
 
 					<form
 						action='#'
@@ -131,13 +131,13 @@ const AllBrands = () => {
 							value={formik.values.title}
 							onChange={formik.handleChange("title")}
 							onBlur={formik.handleBlur("title")}
-							placeholder='Brand Name'
+							placeholder='Tên thương hiệu'
 						/>
 
 						<button
 							type='submit'
 							className='bg-green-700 px-5  py-3 rounded text-white font-bold'>
-							Add Brand
+							Thêm thương hiệu
 						</button>
 					</form>
 					<div className='error'>
@@ -145,7 +145,7 @@ const AllBrands = () => {
 					</div>
 				</div>
 				<div className='w-[65%]'>
-					<h2 className='text-xl my-4 font-bold'>Brands</h2>
+					<h2 className='text-xl my-4 font-bold'>Thương hiệu</h2>
 					<Table columns={columns} dataSource={data} />
 				</div>
 				<CustomModel

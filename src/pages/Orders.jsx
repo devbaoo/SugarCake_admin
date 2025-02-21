@@ -91,7 +91,7 @@ const Orders = () => {
 	}
 	return (
 		<div className='my-5'>
-			<h2 className='text-xl my-4 font-bold'>Orders</h2>
+			<h2 className='text-xl my-4 font-bold'>Đơn hàng</h2>
 			<Table columns={columns} dataSource={data} />
 		</div>
 	);

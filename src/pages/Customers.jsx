@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from "react";
 import { Table } from "antd";
 import { useDispatch, useSelector } from "react-redux";
@@ -99,7 +100,7 @@ const Customers = () => {
 	return (
 		<>
 			<div className='my-5'>
-				<h2 className='text-xl my-4 font-bold'>Customers</h2>
+				<h2 className='text-xl my-4 font-bold'>Khách hàng</h2>
 				<Table columns={columns} dataSource={data} />
 			</div>
 			<CustomModel

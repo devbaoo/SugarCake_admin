@@ -119,7 +119,7 @@ const AllProducts = () => {
 	return (
 		<>
 			<div className='my-5'>
-				<h2 className='text-xl my-4 font-bold'>All Products</h2>
+				<h2 className='text-xl my-4 font-bold'>Tất cả sản phẩm</h2>
 				<Table columns={columns} dataSource={data} />
 			</div>
 			<CustomModel
@@ -128,7 +128,7 @@ const AllProducts = () => {
 				btnAction={() => {
 					deleteProductData(productId);
 				}}
-				title='Are yo sure, do you want to delete this Product?'
+				title='Bạn có chắc chắn muốn xóa Sản phẩm này không?'
 			/>
 		</>
 	);

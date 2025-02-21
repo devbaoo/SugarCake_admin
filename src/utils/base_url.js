@@ -1,1 +1,1 @@
-export const base_url = "http://localhost:5004/api/";
+export const base_url = "https://shark-app-lohcb.ondigitalocean.app/api/";

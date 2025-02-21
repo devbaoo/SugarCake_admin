@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect } from "react";
 import { Table } from "antd";
 import { useDispatch, useSelector } from "react-redux";
@@ -92,7 +93,7 @@ const Dashboard = () => {
 	});
 	return (
 		<>
-			<h2 className='text-xl font-bold'>Dashboard</h2>
+			<h2 className='text-xl font-bold'>Thống kê</h2>
 			<section>
 				<div className='flex justify-center items-center gap-10 my-8'>
 					<div className='w-[20%] shadow-lg border rounded flex justify-center gap-10 items-center'>
@@ -100,7 +101,7 @@ const Dashboard = () => {
 							<FcSalesPerformance size={40} />
 						</div>
 						<div>
-							<p className='my-5 text-gray-400'>Total Sells</p>
+							<p className='my-5 text-gray-400'>Tổng doanh thu</p>
 							<h3 className='text-2xl text-green-700 font-bold my-5'>
 								{`$${totalOrdersAmount}`}
 							</h3>
@@ -112,7 +113,7 @@ const Dashboard = () => {
 						</div>
 						<div>
 							<p className='my-5 text-gray-400'>
-								Average Order Value
+							Giá trị đơn hàng trung bình
 							</p>
 							<h3 className='text-2xl font-bold text-green-700 my-5'>
 								{`$${Math.floor(
@@ -126,7 +127,7 @@ const Dashboard = () => {
 							<FaSellsy size={40} />
 						</div>
 						<div className='text-center'>
-							<p className='my-5 text-gray-400'>Total Orders</p>
+							<p className='my-5 text-gray-400'>Tổng số đơn hàng</p>
 							<h3 className='text-2xl text-green-700 font-bold my-5'>
 								{getAllOrders?.length}
 							</h3>
@@ -138,7 +139,7 @@ const Dashboard = () => {
 						</div>
 						<div className='text-center'>
 							<p className='my-5  text-gray-400'>
-								Total Customers
+							Tổng số khách hàng
 							</p>
 							<h3 className='text-2xl text-green-700 font-bold my-5'>
 								{getAllCustomers?.length}
@@ -150,7 +151,7 @@ const Dashboard = () => {
 							<FaSitemap size={40} />
 						</div>
 						<div className='text-center'>
-							<p className='my-5 text-gray-400'>Total Products</p>
+							<p className='my-5 text-gray-400'>Tổng sản phẩm</p>
 							<h3 className='text-2xl text-green-700 font-bold my-5'>
 								{totalProduct?.length}
 							</h3>
@@ -158,7 +159,7 @@ const Dashboard = () => {
 					</div>
 				</div>
 				<div className='my-5'>
-					<h2 className='text-xl mb-2 font-bold'>Recent Orders</h2>
+					<h2 className='text-xl mb-2 font-bold'>Đơn hàng gần đây</h2>
 					<Table columns={columns} dataSource={data} />
 				</div>
 				<div className='my-5'>

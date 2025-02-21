@@ -17,11 +17,11 @@ import { IoMdClose } from "react-icons/io";
 import { createProducts } from "../features/products/productSlice";
 
 let userSchema = Yup.object().shape({
-	title: Yup.string().required("Title is Required"),
+	title: Yup.string().required("Tiêu đề là bắt buộc"),
 	description: Yup.string().required("Description is Required"),
 	price: Yup.number().required("Price is Required"),
 	brand: Yup.string().required("Brand is Required"),
-	category: Yup.string().required("Category is Required"),
+	category: Yup.string().required("Thể loại là bắt buộc"),
 	tags: Yup.string().required("Tag is Required"),
 	color: Yup.array()
 		.min(1, "Please pick at least one color")
@@ -114,12 +114,12 @@ const AddProduct = () => {
 					<div className='my-6 mx-14 w-[80%]'>
 						<div>
 							<h2 className='text-3xl font-medium'>
-								Product Name{" "}
+								Tên sản phầm{" "}
 							</h2>
 							<CustomInput
 								className='w-full px-2 py-2 my-5 border rounded text-lg'
 								type='text'
-								placeholder='Enter Product Name'
+								placeholder='Nhập tên sản phẩm'
 								name='title'
 								val={formik.values.title}
 								onChng={formik.handleChange("title")}
@@ -134,7 +134,7 @@ const AddProduct = () => {
 							<ReactQuill
 								theme='snow'
 								className='h-[500px]'
-								placeholder='Write your product description here'
+								placeholder='Viết mô tả sản phẩm của bạn ở đây'
 								name='description'
 								value={formik.values.description}
 								onChange={formik.handleChange("description")}
@@ -151,7 +151,7 @@ const AddProduct = () => {
 								<label
 									htmlFor='categories'
 									className='block mb-2 text-lg font-bold text-gray-900'>
-									Select a Category
+									Chọn một danh mục
 								</label>
 								<select
 									name='category'
@@ -160,7 +160,7 @@ const AddProduct = () => {
 									onBlur={formik.handleBlur("category")}
 									id='categories'
 									className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 '>
-									<option>Choose a Category</option>
+									<option>Chọn một danh mục</option>
 									{allCategory.map((i, index) => {
 										return (
 											<option key={index} value={i.title}>
@@ -180,7 +180,7 @@ const AddProduct = () => {
 								<label
 									htmlFor='categories'
 									className='block mb-2 text-lg font-bold text-gray-900'>
-									Select Tags
+									Chọn thẻ
 								</label>
 								<select
 									name='tags'
@@ -189,10 +189,10 @@ const AddProduct = () => {
 									onBlur={formik.handleBlur("tags")}
 									id='tags'
 									className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 '>
-									<option value=''>Choose Tags</option>
-									<option value='featured'>Featured</option>
-									<option value='popular'>Popular</option>
-									<option value='Special'>Special</option>
+									<option value=''>Chọn thẻ</option>
+									<option value='featured'>Nổi bật</option>
+									<option value='popular'>Phổ biến</option>
+									<option value='Special'>Đặc biệt</option>
 								</select>
 								<div className='error'>
 									{formik.touched.tags && formik.errors.tags}
@@ -202,7 +202,7 @@ const AddProduct = () => {
 
 						<div>
 							<h2 className='text-lg mb-2 font-medium'>
-								Product Images
+							Hình ảnh sản phẩm
 							</h2>
 							<Dropzone
 								onDrop={(acceptedFiles) =>
@@ -213,8 +213,8 @@ const AddProduct = () => {
 										<div {...getRootProps()}>
 											<input {...getInputProps()} />
 											<p>
-												Drag 'n' drop some files here,
-												or click to select files
+											Kéo và thả một số tệp ở đây,
+											hoặc nhấp để chọn tệp
 											</p>
 										</div>
 									</section>
@@ -242,11 +242,11 @@ const AddProduct = () => {
 							})}
 						</div>
 						<div className='mb-5'>
-							<h2 className='text-lg font-medium'>Price</h2>
+							<h2 className='text-lg font-medium'>Giấ</h2>
 							<CustomInput
 								className='w-full px-2 py-2 my-2 border rounded'
 								type='number'
-								placeholder='Enter Price'
+								placeholder='Nhập giá sản phẩm'
 								name='price'
 								val={formik.values.price}
 								onChng={formik.handleChange("price")}
@@ -261,7 +261,7 @@ const AddProduct = () => {
 								<label
 									htmlFor='categories'
 									className='block mb-2 text-lg font-bold text-gray-900'>
-									Select Brand
+									Chọn thương hiệu
 								</label>
 								<select
 									name='brand'
@@ -270,7 +270,7 @@ const AddProduct = () => {
 									onBlur={formik.handleBlur("brand")}
 									id='brand'
 									className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 '>
-									<option>Choose a Brand</option>
+									<option>Chọn thương hiệu</option>
 									{allBrands.map((i, index) => {
 										return (
 											<option key={index} value={i.title}>
@@ -286,11 +286,11 @@ const AddProduct = () => {
 							</div>
 						</div>
 						<div className='mb-5'>
-							<h2 className='text-lg font-medium'>Quantity</h2>
+							<h2 className='text-lg font-medium'>Số lượng</h2>
 							<CustomInput
 								className='w-full px-2 py-2 my-2 border rounded'
 								type='number'
-								placeholder='Quantity'
+								placeholder='Nhập số lượng'
 								name='quantity'
 								val={formik.values.quantity}
 								onChng={formik.handleChange("quantity")}
@@ -302,13 +302,13 @@ const AddProduct = () => {
 							</div>
 						</div>
 						<div className='mb-5'>
-							<h2 className='text-lg font-medium'>Color</h2>
+							<h2 className='text-lg font-medium'>Màu</h2>
 
 							<Select
 								mode='multiple'
 								className='w-full text-black'
 								allowClear
-								placeholder='Choose Colors'
+								placeholder='Chọn màu'
 								// defaultValue={color}
 								onChange={(e) => handleColor(e)}
 								options={colorOptions}
@@ -321,7 +321,7 @@ const AddProduct = () => {
 							<button
 								type='submit'
 								className='bg-green-700 px-5 py-3 rounded text-white font-bold'>
-								Add Product
+								Thêm sản phẩm
 							</button>
 						</div>
 					</div>

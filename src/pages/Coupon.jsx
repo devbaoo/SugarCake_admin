@@ -131,13 +131,13 @@ const Coupon = () => {
 					action='#'
 					onSubmit={formik.handleSubmit}
 					className='w-[30%] pl-8'>
-					<h2 className='text-xl my-4 font-bold'>Add Coupon</h2>
+					<h2 className='text-xl my-4 font-bold'>Thêm phiếu giảm giá</h2>
 
 					<div className='flex items-center flex-col gap-2'>
 						<input
 							className='w-[50%] px-3 py-3 border rounded text-sm'
 							type='text'
-							placeholder='Coupon Name'
+							placeholder='Tên phiếu giảm giá'
 							name='name'
 							value={formik.values.name}
 							onChange={formik.handleChange("name")}
@@ -149,7 +149,7 @@ const Coupon = () => {
 						<input
 							className='w-[50%] px-3 py-3 border rounded text-sm'
 							type='date'
-							placeholder='Expiry Date'
+							placeholder='Ngày hết hạn'
 							name='expiry'
 							value={formik.values.title}
 							onChange={formik.handleChange("expiry")}
@@ -161,7 +161,7 @@ const Coupon = () => {
 						<input
 							className='w-[50%] px-3 py-3 border rounded text-sm'
 							type='number'
-							placeholder='Discount'
+							placeholder='Giảm giá'
 							name='discount'
 							value={formik.values.title}
 							onChange={formik.handleChange("discount")}
@@ -173,12 +173,12 @@ const Coupon = () => {
 						<button
 							type='submit'
 							className='bg-green-700 px-5  py-3 rounded text-white font-bold'>
-							Add Coupon
+							Thêm phiếu giảm giá
 						</button>
 					</div>
 				</form>
 				<div className='w-[65%]'>
-					<h2 className='text-xl my-4 font-bold'>Coupons</h2>
+					<h2 className='text-xl my-4 font-bold'>Phiếu giảm giá</h2>
 					<Table columns={columns} dataSource={data} />
 				</div>
 				<CustomModel

@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import { MdDashboard } from "react-icons/md";
 import { FaCartPlus } from "react-icons/fa";
@@ -44,16 +45,17 @@ const AdminLayout = () => {
 				<div className='logo'>
 					<Link to={"/admin"}>
 						<h2 className='lg-logo text-white text-3xl font-bold text-center'>
-							Sneaker Store
+							Sugar Silk Cake Store
 						</h2>
 					</Link>
 					<Link to={"/admin"}>
 						<h2 className='sm-logo text-white text-3xl font-bold text-center'>
-							S Store
+						Sugar Silk Cake Store
 						</h2>
 					</Link>
 				</div>
 				<Menu
+					style={{ marginTop: "70px"}}
 					theme='dark'
 					mode='inline'
 					defaultSelectedKeys={[""]}
@@ -66,62 +68,62 @@ const AdminLayout = () => {
 						{
 							key: "",
 							icon: <MdDashboard />,
-							label: "Dashboard",
+							label: "Thống kê",
 						},
 						{
 							key: "customers",
 							icon: <FaUsers />,
-							label: "Customers",
+							label: "Khánh hàng",
 						},
 						{
 							key: "catalog",
 							icon: <FaCartPlus />,
-							label: "Catalog",
+							label: "Danh mục",
 							children: [
 								{
 									key: "add-product",
 									icon: <FaCartPlus />,
-									label: "Add Products",
+									label: "Thêm bánh",
 								},
 								{
 									key: "products",
 									icon: <FaCartPlus />,
-									label: "Products",
+									label: "Bánh",
 								},
 
 								{
 									key: "categories",
 									icon: <MdCategory />,
-									label: "Category",
+									label: "Loại",
 								},
 
 								{
 									key: "brands",
 									icon: <SiBrandfolder />,
-									label: "Brands",
+									label: "Thương hiệu",
 								},
 
 								{
 									key: "colors",
 									icon: <IoIosColorFill />,
-									label: "Colors",
+									label: "Màu sắc",
 								},
 							],
 						},
 						{
 							key: "orders",
 							icon: <RiListOrdered2 />,
-							label: "Orders",
+							label: "Đơn hàng",
 						},
 						{
 							key: "Marketing",
 							icon: <BiSolidOffer />,
-							label: "Marketing",
+							label: "Tiếp thị",
 							children: [
 								{
 									key: "coupon",
 									icon: <BiSolidOffer />,
-									label: "Coupon",
+									label: "Phiếu giảm giá",
 								},
 							],
 						},
@@ -129,7 +131,7 @@ const AdminLayout = () => {
 						{
 							key: "enquiries",
 							icon: <MdLiveHelp />,
-							label: "Enquiries",
+							label: "Thắc mắc",
 						},
 					]}
 				/>
