@@ -1,0 +1,88 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.error{
+  color: red;
+}
+body{
+  background-color: #f1f2f4;
+}
+.logo{
+  height: 32px;
+  Margin: 16px;
+}
+.logo img{
+  height: 40px;
+}
+.sm-logo{
+  display: none;
+  transition: all ease-in-out 0.3s;
+}
+.ant-layout-sider-collapsed .sm-logo{
+  display: block;
+  transition: all ease-in-out 0.3s;
+}
+.ant-layout-sider-collapsed .lg-logo{
+  display: none;
+}
+
+.ant-layout{
+  min-height: 100vh;
+}
+.admin-info h3{
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+.admin-info p{
+  line-height: 20px;
+  margin-bottom: 0px;
+}
+.notification{
+  position: absolute;
+  top: -30px;
+  right: -5px;
+  color: #ff504e;
+  font-weight: 600;
+  font-size: 16px;
+}
+/* dropdown */
+
+.dropbtn {
+  border: none;
+  text-align: start;
+  margin: 10px 0;
+
+  }
+  .dropdown {
+  position: relative;
+  display: inline-block;
+  }
+
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  width: 160px;
+  }
+
+  .dropdown-content .drop-items {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  }
+
+  .updateInput{
+    padding: 5px 10px;
+    border: .5px solid gray;
+    border-radius: 5px;
+    width: 100%;
+  }
+  .dropdown:hover .dropdown-content {display: block;}
+  
