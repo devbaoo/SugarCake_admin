@@ -242,7 +242,7 @@ const AddProduct = () => {
 							})}
 						</div>
 						<div className='mb-5'>
-							<h2 className='text-lg font-medium'>Giấ</h2>
+							<h2 className='text-lg font-medium'>Giá</h2>
 							<CustomInput
 								className='w-full px-2 py-2 my-2 border rounded'
 								type='number'
@@ -254,35 +254,6 @@ const AddProduct = () => {
 							/>
 							<div className='error'>
 								{formik.touched.price && formik.errors.price}
-							</div>
-						</div>
-						<div className='mb-5'>
-							<div className='w-full'>
-								<label
-									htmlFor='categories'
-									className='block mb-2 text-lg font-bold text-gray-900'>
-									Chọn thương hiệu
-								</label>
-								<select
-									name='brand'
-									val={formik.values.brand}
-									onChange={formik.handleChange("brand")}
-									onBlur={formik.handleBlur("brand")}
-									id='brand'
-									className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 '>
-									<option>Chọn thương hiệu</option>
-									{allBrands.map((i, index) => {
-										return (
-											<option key={index} value={i.title}>
-												{i.title}
-											</option>
-										);
-									})}
-								</select>
-								<div className='error'>
-									{formik.touched.brand &&
-										formik.errors.brand}
-								</div>
 							</div>
 						</div>
 						<div className='mb-5'>
@@ -299,22 +270,6 @@ const AddProduct = () => {
 							<div className='error'>
 								{formik.touched.quantity &&
 									formik.errors.quantity}
-							</div>
-						</div>
-						<div className='mb-5'>
-							<h2 className='text-lg font-medium'>Màu</h2>
-
-							<Select
-								mode='multiple'
-								className='w-full text-black'
-								allowClear
-								placeholder='Chọn màu'
-								// defaultValue={color}
-								onChange={(e) => handleColor(e)}
-								options={colorOptions}
-							/>
-							<div className='error'>
-								{formik.touched.color && formik.errors.color}
 							</div>
 						</div>
 						<div>

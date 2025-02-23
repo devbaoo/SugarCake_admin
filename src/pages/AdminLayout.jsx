@@ -4,8 +4,6 @@ import { MdDashboard } from "react-icons/md";
 import { FaCartPlus } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa";
 import { MdCategory } from "react-icons/md";
-import { SiBrandfolder } from "react-icons/si";
-import { IoIosColorFill } from "react-icons/io";
 import { RiListOrdered2 } from "react-icons/ri";
 import { BiSolidOffer } from "react-icons/bi";
 import { MdLiveHelp } from "react-icons/md";
@@ -73,7 +71,7 @@ const AdminLayout = () => {
 						{
 							key: "customers",
 							icon: <FaUsers />,
-							label: "Khánh hàng",
+							label: "Khách hàng",
 						},
 						{
 							key: "catalog",
@@ -97,17 +95,6 @@ const AdminLayout = () => {
 									label: "Loại",
 								},
 
-								{
-									key: "brands",
-									icon: <SiBrandfolder />,
-									label: "Thương hiệu",
-								},
-
-								{
-									key: "colors",
-									icon: <IoIosColorFill />,
-									label: "Màu sắc",
-								},
 							],
 						},
 						{
