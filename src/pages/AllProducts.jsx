@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from "react";
 import { Table } from "antd";
 import { useDispatch, useSelector } from "react-redux";
@@ -26,16 +27,6 @@ const columns = [
 		title: "Category",
 		dataIndex: "category",
 		sorter: (a, b) => a.category.length - b.category.length,
-	},
-	{
-		title: "Brand",
-		dataIndex: "brand",
-		sorter: (a, b) => a.brand.length - b.brand.length,
-	},
-	{
-		title: "Color",
-		dataIndex: "color",
-		sorter: (a, b) => a.color.length - b.color.length,
 	},
 	{
 		title: "Quantity",
@@ -72,10 +63,6 @@ const AllProducts = () => {
 				title: totalProducts[i].title,
 				description: totalProducts[i].description,
 				price: `${totalProducts[i].price} VND`,
-				brand: totalProducts[i].brand,
-				color: totalProducts[i].color.map((cVal, index) => {
-					return <p key={index}>{cVal}</p>;
-				}),
 				category: totalProducts[i].category,
 				quantity: totalProducts[i].quantity,
 				sold: totalProducts[i].sold,
@@ -97,6 +84,7 @@ const AllProducts = () => {
 			});
 		}
 	}
+
 	const [open, setOpen] = useState(false);
 	const [productId, setProductId] = useState("");
 	const showModal = (e) => {

@@ -7,8 +7,6 @@ import Enquiries from "./pages/Enquiries";
 import Orders from "./pages/Orders";
 import AllProducts from "./pages/AllProducts";
 import ProductCategories from "./pages/ProductCategories";
-import AllBrands from "./pages/AllBrands";
-import AllColors from "./pages/AllColors";
 import Customers from "./pages/Customers";
 import AddProduct from "./pages/AddProduct";
 import Coupon from "./pages/Coupon";
@@ -33,9 +31,7 @@ function App() {
 					<Route path='products' element={<AllProducts />} />
 					<Route path='add-product' element={<AddProduct />} />
 					<Route path='categories' element={<ProductCategories />} />
-					<Route path='brands' element={<AllBrands />} />
 					<Route path='coupon' element={<Coupon />} />
-					<Route path='colors' element={<AllColors />} />
 					<Route path='orders' element={<Orders />} />
 					<Route path='order/:id' element={<ViewOrder />} />
 					<Route path='enquiries' element={<Enquiries />} />
