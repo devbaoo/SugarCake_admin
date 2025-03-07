@@ -48,12 +48,12 @@ const AdminLayout = () => {
 					</Link>
 					<Link to={"/admin"}>
 						<h2 className='sm-logo text-white text-3xl font-bold text-center'>
-						Sugar Silk Cake Store
+							Sugar Silk Cake Store
 						</h2>
 					</Link>
 				</div>
 				<Menu
-					style={{ marginTop: "70px"}}
+					style={{ marginTop: "70px" }}
 					theme='dark'
 					mode='inline'
 					defaultSelectedKeys={[""]}
@@ -81,12 +81,12 @@ const AdminLayout = () => {
 								{
 									key: "add-product",
 									icon: <FaCartPlus />,
-									label: "Thêm bánh",
+									label: "Thêm sản phầm",
 								},
 								{
 									key: "products",
 									icon: <FaCartPlus />,
-									label: "Bánh",
+									label: "Sản phẩm",
 								},
 
 								{
