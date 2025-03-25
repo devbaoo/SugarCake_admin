@@ -12,6 +12,8 @@ import AddProduct from "./pages/AddProduct";
 import Coupon from "./pages/Coupon";
 import ViewEnquiry from "./pages/ViewEnquiry";
 import ViewOrder from "./pages/ViewOrder";
+import AllBlogs from "./pages/AllBlogs";
+import AddBlog from "./pages/AddBlog";
 import { ProtectedRoutes } from "./routing/ProtectedRoutes";
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
 					<Route path='customers' element={<Customers />} />
 					<Route path='products' element={<AllProducts />} />
 					<Route path='add-product' element={<AddProduct />} />
+					<Route path='blogs' element={<AllBlogs />} />
+					<Route path='add-blog' element={< AddBlog/>} />
 					<Route path='categories' element={<ProductCategories />} />
 					<Route path='coupon' element={<Coupon />} />
 					<Route path='orders' element={<Orders />} />

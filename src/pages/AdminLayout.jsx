@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { MdDashboard } from "react-icons/md";
 import { FaCartPlus } from "react-icons/fa";
+import { ImBlog } from "react-icons/im";
 import { FaUsers } from "react-icons/fa";
 import { MdCategory } from "react-icons/md";
 import { RiListOrdered2 } from "react-icons/ri";
@@ -76,7 +77,7 @@ const AdminLayout = () => {
 						{
 							key: "catalog",
 							icon: <FaCartPlus />,
-							label: "Danh mục",
+							label: "Sản phẩm",
 							children: [
 								{
 									key: "add-product",
@@ -96,6 +97,24 @@ const AdminLayout = () => {
 								},
 
 							],
+						},
+						{
+							key: "blogs",
+							icon: <ImBlog />,
+							label: "Bài viết",
+							children: [
+								{
+									key: "add-blog",
+									icon: <ImBlog />,
+									label: "Thêm bài viết",
+								},
+								{
+									key: "blogs",
+									icon: <ImBlog />,
+									label: "Bài viết",
+								},
+							],
+
 						},
 						{
 							key: "orders",
