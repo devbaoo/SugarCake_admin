@@ -47,11 +47,6 @@ const AdminLayout = () => {
 							Sugar Silk Cake Store
 						</h2>
 					</Link>
-					<Link to={"/admin"}>
-						<h2 className='sm-logo text-white text-3xl font-bold text-center'>
-							Sugar Silk Cake Store
-						</h2>
-					</Link>
 				</div>
 				<Menu
 					style={{ marginTop: "70px" }}
@@ -166,10 +161,6 @@ const AdminLayout = () => {
 						}}
 					/>
 					<div className='pr-8 flex gap-2 justify-center items-center'>
-						<div className='relative mx-3 cursor-pointer'>
-							<span className='notification'>2</span>
-							<IoNotifications className='text-2xl' />
-						</div>
 						<div className='w-12 border bg-blue-950 rounded-full p-[4px]'>
 							{/* <img
 								className='w-[90%]'
@@ -196,9 +187,6 @@ const AdminLayout = () => {
 								</div>
 							</button>
 							<div className='dropdown-content font-semibold'>
-								<Link to={"/"} className='drop-items'>
-									Profile
-								</Link>
 								<Link
 									onClick={handlelogOut}
 									className='drop-items border-t-2'>
