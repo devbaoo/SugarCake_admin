@@ -44,10 +44,6 @@ const columns = [
 		sorter: (a, b) => a.ammount.length - b.ammount.length,
 	},
 	{
-		title: "Payment ID",
-		dataIndex: "id",
-	},
-	{
 		title: "Date",
 		dataIndex: "date",
 	},
