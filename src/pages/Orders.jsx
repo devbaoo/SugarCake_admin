@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import { Table } from "antd";
+import { useEffect } from "react";
+import { Table, Button } from "antd";
 import { useDispatch, useSelector } from "react-redux";
-import { getOrders } from "../features/auth/authSlice";
+import { getOrders, exportOrders } from "../features/auth/authSlice";
 import { Link } from "react-router-dom";
 import { IoMdEye } from "react-icons/io";
 
@@ -37,10 +37,6 @@ const columns = [
 		sorter: (a, b) => a.ammount.length - b.ammount.length,
 	},
 	{
-		title: "Payment ID",
-		dataIndex: "id",
-	},
-	{
 		title: "Date",
 		dataIndex: "date",
 	},
@@ -52,12 +48,18 @@ const columns = [
 
 const Orders = () => {
 	const dispatch = useDispatch();
+
 	useEffect(() => {
 		dispatch(getOrders());
 	}, [dispatch]);
 
+	const handleExport = () => {
+		dispatch(exportOrders());
+	};
+
 	const userAllOrders = useSelector((state) => state.auth?.orders);
 	const getAllOrders = [...userAllOrders].reverse();
+
 	const data = [];
 	for (let i = 0; i < getAllOrders?.length; i++) {
 		if (getAllOrders) {
@@ -72,9 +74,9 @@ const Orders = () => {
 					return <p key={index}>{i?.product?._id}</p>;
 				}),
 				id: getAllOrders[i]?.paymentInfo?.razorpayPaymentId,
-				ammount: `${getAllOrders[i]?.priceAfterDiscount} VND`,
+				ammount: `${getAllOrders[i]?.priceAfterDiscount.toLocaleString("vi-VN")} VND`,
 				orderStatus: getAllOrders[i]?.orderStatus,
-				date: new Date(getAllOrders[i]?.createdAt).toLocaleString(),
+				date: new Date(getAllOrders[i]?.createdAt).toLocaleDateString("vi-VN"),
 				action: (
 					<>
 						<div className='flex gap-3'>
@@ -89,9 +91,15 @@ const Orders = () => {
 			});
 		}
 	}
+
 	return (
 		<div className='my-5'>
-			<h2 className='text-xl my-4 font-bold'>Đơn hàng</h2>
+			<div className='flex justify-between items-center mb-4'>
+				<h2 className='text-xl font-bold'>Đơn hàng</h2>
+				<Button type='primary' onClick={handleExport}>
+					Export Orders
+				</Button>
+			</div>
 			<Table columns={columns} dataSource={data} />
 		</div>
 	);

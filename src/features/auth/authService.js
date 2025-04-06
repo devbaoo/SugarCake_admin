@@ -45,11 +45,33 @@ const logOut = async () => {
 	const response = await axios.get(`${base_url}user/logout`);
 	return response.data;
 };
+const exportOrders = async () => {
+	try {
+		const response = await axios.get(`${base_url}user/orders/export`, {
+			...config,
+			responseType: "blob", 
+		});
+
+		// Tạo link để tải file
+		const url = window.URL.createObjectURL(new Blob([response.data]));
+		const link = document.createElement("a");
+		link.href = url;
+		link.setAttribute("download", "orders.xlsx");
+		document.body.appendChild(link);
+		link.click();
+		link.remove();
+	} catch (error) {
+		console.error("Error exporting orders:", error);
+		throw error;
+	}
+};
+
 
 const authService = {
 	login,
 	getOrders,
 	updateOrderStatus,
 	logOut,
+	exportOrders,
 };
 export default authService;

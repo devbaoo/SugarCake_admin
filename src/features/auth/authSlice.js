@@ -56,6 +56,19 @@ export const updateOrderStatus = createAsyncThunk(
 		}
 	}
 );
+export const exportOrders = createAsyncThunk(
+	"order/export-orders",
+	async (_, thunkAPI) => {
+		try {
+			const res = await authService.exportOrders(); // file sẽ được tải về tại client
+			toast.success("Export successful!");
+			return res;
+		} catch (error) {
+			toast.error("Export failed!");
+			return thunkAPI.rejectWithValue(error);
+		}
+	}
+);
 
 export const authSlice = createSlice({
 	name: "auth",
@@ -121,7 +134,22 @@ export const authSlice = createSlice({
 				state.isError = true;
 				state.isSuccess = false;
 				state.message = action.error;
-			});
+			})
+			.addCase(exportOrders.pending, (state) => {
+				state.isLoading = true;
+			})
+			.addCase(exportOrders.fulfilled, (state) => {
+				state.isLoading = false;
+				state.isSuccess = true;
+				state.message = "Export success";
+			})
+			.addCase(exportOrders.rejected, (state, action) => {
+				state.isLoading = false;
+				state.isError = true;
+				state.isSuccess = false;
+				state.message = action.error;
+			});			
+			
 	},
 });
 
